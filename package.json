@@ -9,13 +9,16 @@
     "cssnano": "^4.1.10",
     "gulp-postcss": "^8.0.0",
     "gulp-autoprefixer": "^6.1.0",
-    "gulp-sourcemap": "^1.0.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-pug": "^4.0.1",
     "gulp": "^4.0.1",
     "gulp-sass": "^4.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "css-mqpacker": "^7.0.0",
+    "postcss-uncss": "^0.16.1",
+    "uncss": "^0.16.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

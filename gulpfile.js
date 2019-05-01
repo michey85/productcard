@@ -3,7 +3,8 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss')
 const cssnano = require('cssnano');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
+const cssmqpacker = require('css-mqpacker');
 var browserSync = require('browser-sync').create();
 
 gulp.task('serve', function() {
@@ -15,19 +16,15 @@ gulp.task('serve', function() {
 	});
 
 });
-gulp.task('css', function () {
+gulp.task('sass', function () {
 	var plugin = [
 		autoprefixer(),
+		cssmqpacker(),
 		cssnano()
 	];
-
-	return gulp.src('./css/style.css')
-		.pipe(postcss(plugin))
-		.pipe(gulp.dest('./cssmin'));
-});
-gulp.task('sass', function () {
-		return gulp.src('src/scss/**/*.scss')
+		return gulp.src('src/scss/style.scss')
 			.pipe(sass())
+			.pipe(postcss(plugin))
 			.pipe(gulp.dest('css'))
 			.pipe(browserSync.reload({stream:true}))
 	}
