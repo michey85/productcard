@@ -1,0 +1,199 @@
+.productCard {
+
+  display: grid;
+  grid-template-areas:
+          "title"
+          "img"
+          "desc"
+          "price"
+          "btn";
+
+  margin-top:40px;
+  font-family: PFHighwaySansPro;
+
+  @include mediamin(640px) {
+    grid-template-areas:
+    "img img"
+    "title title"
+    "desc desc"
+    "price btn"
+    ;
+    margin-top: 88px;
+  }
+  @include mediamin(960px) {
+    grid-template-areas:
+      "img title"
+      "img desc"
+      "img price"
+      "img btn"
+  ;
+    margin-top:100px;
+  }
+  @include mediamin(1366px) {
+    margin-top:128px;
+  }
+
+
+
+  &__title {
+    grid-area: title;
+    color: $black;
+    @include rem(36);
+    font-weight: normal;
+    margin-top:0;
+    margin-bottom: 15px;
+    line-height: 1.1;
+
+    @include mediamin(640px) {
+      @include rem(40);
+      line-height: 1.15;
+    }
+    @include mediamin(960px) {
+      @include rem(56);
+      margin-top: 10px;
+    }
+    @include mediamin(1366px) {
+      @include rem(64);
+      margin-top: 30px;
+      margin-bottom:0;
+      align-self: end;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    grid-area: img;
+
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 27px;
+
+    @include mediamin(960px) {
+      width: 392px;
+      margin-right:40px;
+    }
+    @include mediamin(1366px) {
+      width: 528px;
+      margin-right:48px;
+    }
+  }
+
+  &__desc {
+    grid-area: desc;
+    color: $gray;
+    font-family: 'Pragmatica', arial;
+    @include rem(16);
+    line-height: 1.5;
+    margin-bottom:21px;
+
+    @include mediamin(640px) {
+      @include rem(20);
+      line-height: 1.4;
+    }
+    @include mediamin(960px) {
+      align-self: center;
+      margin-bottom:0;
+    }
+    @include mediamin(1366px) {
+      align-self: center;
+      margin-bottom:0;
+    }
+
+  }
+
+  &__priceContent {
+    grid-area: price;
+
+    @include mediamin(640px) {
+      padding-top:10px;
+    }
+  }
+  &__price {
+    display: inline-block;
+    color: $black;
+    @include rem(32);
+    margin-bottom:12px;
+
+    &::after {
+      content: '\20BD';
+      display: inline-block;
+      margin-left: 5px;
+      margin-right:15px;
+      @include rem(30);
+      font-weight: 500;
+
+      @include mediamin(640px) {
+        @include rem(34);
+        line-height: 1.22;
+      }
+
+    }
+
+    @include mediamin(640px) {
+      @include rem(36);
+      line-height: 1.22;
+    }
+  }
+
+  &__cachback {
+    display: inline-block;
+    color: $gray;
+    @include rem(20);
+    margin-bottom:12px;
+
+    &::after {
+      content: '\20BD';
+      display: inline-block;
+      margin-left: 5px;
+      @include rem(18);
+      font-weight: 500;
+
+      @include mediamin(640px) {
+        @include rem(30);
+        line-height: 1.19;
+      }
+    }
+
+    @include mediamin(640px) {
+      @include rem(32);
+      line-height: 1.19;
+    }
+  }
+
+  &__buyBtn {
+    display: block;
+    grid-area: btn;
+    width: 100%;
+    height: 40px;
+    background-color: $black;
+    color: #fff;
+    @include rem(15);
+    font-weight: 100;
+    text-align: center;
+    border-radius: 1000px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-bottom:40px;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include mediamin(640px) {
+      width: 178px;
+      height: 56px;
+      justify-self: end;
+
+      @include rem(20);
+    }
+
+    @include mediamin(960px) {
+      width: 240px;
+      justify-self: start;
+    }
+  }
+
+
+}

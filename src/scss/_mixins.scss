@@ -1,0 +1,9 @@
+@mixin rem($_px) {
+  font-size: ($_px/16) + rem;
+}
+
+@mixin mediamin($_minWidth) {
+  @media screen and (min-width: $_minWidth) {
+    @content;
+  }
+}

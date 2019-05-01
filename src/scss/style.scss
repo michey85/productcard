@@ -1,0 +1,23 @@
+@import "_normalize";
+@import "_fonts";
+@import "_vars";
+@import "_mixins";
+@import "_productcard";
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 16px;
+
+  @include mediamin(640px) {
+    width: 640px;
+    padding: 0 44px;
+  }
+  @include mediamin(960px) {
+    width: 825px;
+    padding: 0;
+  }
+  @include mediamin(1366px) {
+    width: 1104px;
+  }
+}
