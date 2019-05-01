@@ -1,10 +1,16 @@
 @font-face {
-  font-family: 'PFHighwaySansPro', Arial;
-  src: url('../fonts/PFHighwaySansPro.ttf');
+  font-family: 'PFHighwaySansPro';
+  src: url('pfhighwaysanspro-webfont.woff2') format('woff2'),
+       url('pfhighwaysanspro-webfont.woff') format('woff'),
+       url('PFHighwaySansPro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Pragmatica', arial;
-  src: url('../fonts/pragmatica.ttf');
+  src: url('pragmatica-webfont.woff2') format('woff2'),
+    url('pragmatica-webfont.woff') format('woff'),
+    url('pragmatica.ttf') format('truetype');
 }
 

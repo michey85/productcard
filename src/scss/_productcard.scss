@@ -9,7 +9,7 @@
           "btn";
 
   margin-top:40px;
-  font-family: 'PFHighwaySansPro', Arial;
+  font-family: 'pf_highway_sans_proregular';
 
   @include mediamin(640px) {
     grid-template-areas:
@@ -125,10 +125,14 @@
       margin-right:15px;
       @include rem(30);
       font-weight: 500;
+      font-family: sans-serif;
 
       @include mediamin(640px) {
         @include rem(34);
         line-height: 1.22;
+      }
+      @include mediamin(960px) {
+        margin-right:30px;
       }
 
     }
@@ -149,11 +153,12 @@
       content: '\20BD';
       display: inline-block;
       margin-left: 5px;
-      @include rem(18);
+      @include rem(16);
       font-weight: 500;
+      font-family: sans-serif;
 
       @include mediamin(640px) {
-        @include rem(30);
+        @include rem(28);
         line-height: 1.19;
       }
     }
@@ -195,6 +200,8 @@
     @include mediamin(960px) {
       width: 240px;
       justify-self: start;
+      margin-top:10px;
+      margin-bottom:20px;
     }
   }
 
