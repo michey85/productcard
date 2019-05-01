@@ -9,7 +9,7 @@
           "btn";
 
   margin-top:40px;
-  font-family: PFHighwaySansPro;
+  font-family: 'PFHighwaySansPro', Arial;
 
   @include mediamin(640px) {
     grid-template-areas:
