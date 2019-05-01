@@ -108,6 +108,9 @@
     @include mediamin(640px) {
       padding-top:10px;
     }
+    @include mediamin(960px) {
+      align-self: end;
+    }
   }
   &__price {
     display: inline-block;
